@@ -1,0 +1,26 @@
+using UnityEngine;
+using static UnityEngine.Vector3;
+using static Assets.Scripts.MailType;
+
+public class RobotController : MonoBehaviour
+{
+    public static Robot Robot;
+    private LevelsManager levelsManager;
+
+    public void Start()
+    {
+        Robot = GetComponent<Robot>();
+        Robot.Init();
+        Robot.ResetPosition();
+        Robot.ClearLogs();
+        Robot.ResetOperations();
+        levelsManager = Robot.Controller.GetComponent<LevelsManager>();
+
+        foreach (var obj in Robot.ObjectsToCollect)
+            obj.SetActive(true);
+
+        AdditionalStartMethodInternals
+    }
+
+    userCode
+}

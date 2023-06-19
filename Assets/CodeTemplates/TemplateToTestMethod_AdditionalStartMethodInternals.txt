@@ -1,0 +1,10 @@
+MethodName("ВыНикгдаНеУзнаетеКакоеЗдесьДолжноБытьИмя");
+
+if (Robot.Name == "ВыНикгдаНеУзнаетеКакоеЗдесьДолжноБытьИмя")
+{
+	Robot.Log("Метод успешно создан!");
+	levelsManager.UnlockNextLevel();
+    levelsManager.ShowNextLevelButton();
+}
+else
+	Robot.Log("Метод работает неверно");
